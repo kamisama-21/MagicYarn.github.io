@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Magic Yarn!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">Magic Yarn!</a>
+            </div>
+            <div class="links">
+                <a href="">Home</a>
+                <a href="">Products</a>
+                <a href="">About</a>
+            </div>
+            <div class="search">
+                <form action="">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <nav class="dropdown-menu">
+            <a href="">Home</a>
+            <a href="">Products</a>
+            <a href="">About</a>
+        </nav>
+    </header>
+    <section class="body">
+        <div class="container">
+            <div class="content">
+                <div class="top">
+                    <h1>Tulip Bouquet</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, inventore! Eum, sapiente.
+                        Lorem ipsum dolor sit.</p>
+                </div>
+                <div class="bottom">
+                    <span><p>color</p></span>
+                    <span><div></div><div></div><div></div><div></div></span>
+                </div>
+            </div>
+            <div class="image">
+                <div><img src="tulip.png" alt="tulip"></div>
+                <div class="price"><span>&#8369;350.00</span></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>

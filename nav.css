@@ -1,0 +1,315 @@
+@import url('https://fonts.cdnfonts.com/css/amsterdam-signature-3');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: rgb(250, 228, 189);
+    background: linear-gradient(90deg, rgba(250, 228, 189, 0.2) 16%, rgba(254, 148, 250, 0.2) 65%, rgba(251, 156, 240, 0.2) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: rgb(243, 11, 224);
+}
+
+header {
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F1E5DA;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.toggle-btn {
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+nav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+nav button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    z-index: 100;
+}
+
+nav button:hover {
+    background: #f88be6;
+    color: #ffffff;
+}
+
+nav input[type=text],
+nav button {
+    box-shadow: 5px 5px rgb(253, 96, 232);
+}
+
+nav div {
+    display: flex;
+    width: 33.33%;
+}
+
+nav div a {
+    color: black;
+    text-decoration: none;
+}
+
+nav div:nth-child(1) a {
+    margin-left: 5em;
+}
+
+nav div:nth-child(2) {
+    justify-content: space-around;
+}
+
+nav div:nth-child(3) {
+    justify-content: center;
+    align-items: center;
+}
+
+nav div:nth-child(4) {
+    padding: 3rem;
+    justify-content: end;
+    align-items: center;
+}
+
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 130px;
+}
+
+.dropdown-menu a,
+.dropdown-menu div {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* body section */
+.body .container {
+    margin: 60px auto;
+    padding: 60px;
+    max-width: 90%;
+    height: 75vh;
+    background-color: #ffffff;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.274);
+    display: flex;
+}
+
+.content,
+.image {
+    width: 50%;
+    height: 100%;
+}
+
+.top {
+    height: 85%;
+}
+
+.top,
+.bottom {
+    padding: 0 2rem;
+}
+
+.top h1 {
+    font-family: 'Amsterdam signature', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.top p {
+    margin-top: 2rem;
+}
+
+.bottom {
+    height: 15%;
+    margin-top: 20px;
+    padding: 0 7rem;
+}
+
+.bottom span {
+    display: flex;
+    font-size: 2rem;
+}
+
+.bottom span div {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+}
+
+.bottom span div:nth-child(1) {
+    background: #f8d94e;
+}
+
+.bottom span div:nth-child(2) {
+    background: #FF914D;
+}
+
+.bottom span div:nth-child(3) {
+    background: #F4EAB8;
+}
+
+.bottom span div:nth-child(4) {
+    background: #999861;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+    rotate: 20deg;
+}
+.price{
+    font-size: 2rem;
+    text-align: right;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 992px) {
+    nav div:nth-child(1) {
+        width: 30%;
+    }
+
+    nav div:nth-child(4) {
+        width: 10%;
+    }
+
+    nav div:nth-child(3) {
+        margin-top: -10px;
+        width: 60%;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+}
+
+@media (max-width: 855px) {
+
+    nav input[type=text],
+    nav button {
+        font-size: 18px;
+    }
+
+    nav div:nth-child(1) a {
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo a {
+        font-size: 0.9rem;
+    }
+
+    nav div:nth-child(1) a {
+        margin-left: 1rem;
+    }
+
+    nav div:nth-child(3) {
+        margin-top: -10px;
+        margin-right: -20px;
+        width: 65%;
+    }
+
+    nav input[type=text],
+    nav button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .logo a {
+        font-size: 0.8rem;
+    }
+
+    nav div:nth-child(1) {
+        width: 30%;
+    }
+
+    nav div:nth-child(4) {
+        width: 5%;
+    }
+
+
+}
